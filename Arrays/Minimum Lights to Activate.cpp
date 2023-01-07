@@ -1,4 +1,4 @@
-nt lcount=0;
+int lcount=0;
 int findLamp(int index,vector<int> &A,int B){
     int start = index+B-1<A.size()-1?index+B-1:A.size()-1;
     for(int i=start;i>=index;i--){
