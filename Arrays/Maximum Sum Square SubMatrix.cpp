@@ -10,13 +10,11 @@ int range_sum(int xi, int xj, int yi, int yj)
         ans += psum[xi - 1][xj - 1];
     return ans;
 }
-
-
 int Solution::solve(vector<vector<int> > &matrix, int B) {
     int n = matrix.size(), m = matrix[0].size();
     if(n==1 and B==1) return matrix[0][0];
     
-    // prefix sum
+    // prefix sum for solution
     psum[0][0] = matrix[0][0];
     for (int i = 1; i < n; i++)
         psum[i][0] = psum[i - 1][0] + matrix[i][0];
